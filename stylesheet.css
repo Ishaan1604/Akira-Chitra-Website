@@ -1,0 +1,288 @@
+@font-face {
+    font-family: Raleway;
+    src: url('./fonts/Raleway-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Samarkan;
+    src: url('./fonts/SAMARN__.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Blackpast;
+    src: url('./fonts/Blackpast\ DEMO.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway';
+    letter-spacing: 5%;
+    /* border: 1px solid white; */
+}
+
+
+:root {
+    --background-black: linear-gradient(90deg, rgb(0, 0, 0), rgb(0, 0, 0) , rgb(0, 0, 0), rgb(0, 0, 0))
+}
+
+body {
+    background-color: lightblue;
+    color: white;
+}
+
+.grid {
+    display: grid;
+}
+
+.flex {
+    display: flex;
+}
+
+.nav-bar {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    background: linear-gradient(90deg, transparent, 65%, rgba(0, 0, 0, 0.6));
+}
+
+.nav-bar > ul  {
+    list-style: none;
+    height: 5rem;
+}
+
+.nav-bar > ul > li {
+    height: 100%;
+}
+
+.leftLinks > li > a{
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    justify-content: center;
+    gap: 2rem;
+    height: 100%;
+}
+
+.rightLinks > li {
+   width: 20%;
+}
+
+.rightLinks > li > a {
+    text-decoration: none;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: inherit;
+    height: 100%;
+}
+
+.rightLinks> li:hover, .rightLinks > li:visited{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.rightLinks > li:active {
+    text-decoration: underline;
+}
+
+.full-screen {
+    width: 100vw;
+    height: 100vh;
+}
+
+.team-info {
+    background-color: black;
+    text-align: center;
+    padding-top: 1.5rem;
+}
+
+#game-container, #car-container, #sponsor-container {
+    background-color: black;
+    text-align: center;
+}
+
+.team-info-container > :nth-child(n) {
+    margin-top: 3rem;
+}
+
+#team-info-container > :nth-child(n) {
+    margin-top: 2rem;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.memberText > :last-child {
+    margin-top: 1rem;
+    animation: appear 2s linear 0s;
+}
+
+@keyframes rtl {
+    0% {
+        position: relative;
+        right: -50%;
+        opacity: 0;
+    }
+    100% {
+        position: relative;
+        right: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes ltr {
+    0% {
+        position: relative;
+        left: -50%;
+        opacity: 0;
+    }
+    100% {
+        position: relative;
+        left: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes merchDiv {
+    0% {
+        background-color: black;
+    }
+    100%{
+        background-color: white;
+    }
+}
+
+.rtlAnimation {
+    animation: rtl 1.5s ease-in 0s;
+}
+
+.ltrAnimation {
+    animation: ltr 1.5s ease-in 0s;
+}
+
+.merchAnimation {
+    animation: merchDiv 1.5s linear 0s;
+    background-color: white;
+    text-align: center;
+    color: black;
+}
+
+.memberContainer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left > img {
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.right > img{
+    clip-path: polygon(0% 0%, 75% 0%, 100% 100%, 25% 100%);
+}
+
+.bold {
+    font-weight: 900;
+}
+
+#actual-sponsor-container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+#actual-merch-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+#actual-sponsor-container > img {
+    width: 100%;
+    height: auto;
+}
+
+.grid-container {
+    gap: 1rem;
+    align-items: center;
+    margin: 0 5rem;
+}
+
+.soldOut {
+    position: absolute;
+    z-index: 1;
+    opacity: 50%;
+    width: 22.2%;
+    height: 39%;
+}
+
+.individual-merch {
+    flex-direction: column;
+}
+
+.individual-merch > a {
+    width: 50%;
+    margin: auto;
+    height: 2rem;
+    margin-top: 0.5rem;
+    background-color: rgb(209, 215, 222);
+    border-radius: 0.5rem;
+    text-decoration: none;
+    color: black;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: 600;
+    font-size: small;
+}
+
+.individual-merch > a:hover{
+    background-color: white;
+}
+
+.merch {
+    width: 50%;
+    height: auto;
+    margin: 0.25rem auto;
+}
+
+#shop-container {
+    grid-template-columns: 4fr 6fr;
+    grid-template-rows: 1fr;
+}
+
+.image-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.info-container {
+    background-color: black;
+    color: white;
+    grid-template-rows: 1fr 1fr 4fr 1fr 2fr;
+    grid-template-columns: 1fr;
+    text-align: center;
+}
+
+#merch-image {
+    max-width: 400px;
+    max-height: 400px;
+    width: 28.070vw;
+    height: 78.125vh;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Akira Chitra</title>
+        <meta name="viewport" content="width=device-width, inital-scale=1.0"/>
+        <meta name="author" content="Ishaan Agarwal"/>
+        <meta charset="utf-8"/>
+        <meta name="description" content="Akira Chitra F1 team page"/>
+        <meta name="Keywords" content="Akira, Chitra, Akira Chitra, F1, F1 in schools"/>
+
+        <link rel="stylesheet" href="./stylesheet.css" />
+    </head>
+    <body style="overflow: hidden;">
+        <nav class="grid nav-bar">
+            <ul class="leftLinks">
+                <li>
+                    <a class="flex" href="./index.html#video">
+                        <img src="./773768_317a629c4a574142ab1f2bec72f8f2ce~mv2.png" height="60%">
+                        <h1 style="font-weight: normal; font-size: 3rem;font-family: Samarkan;">AKIRA CHITRA</h1>
+                    </a>
+                </li>
+            </ul>
+            <ul class="rightLinks flex">
+                <li>
+                    <a href="./index.html#team-container" class="flex">OUR TEAM</a>
+                </li>
+                <li>
+                    <a href="./index.html#car-container" class="flex">THE CAR</a>
+                </li>
+                <li>
+                    <a href="./index.html#game-container" class="flex">F1 GAME</a>
+                </li>
+                <li>
+                    <a href="./index.html#sponsor-container" class="flex">OUR SPONSORS</a>
+                </li>
+                <li>
+                    <a href="./index.html#merch-container" class="flex">OUR MERCH</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="shop-container" class="grid shop-container full-screen">
+            <div class="image-container flex">
+                <img id="merch-image" />
+                <img src="./10-2-sold-out-png-file.png" class="soldOut"/>
+                <div class="flex" style="flex-direction: row; width: 69.5%;margin: 1rem auto; height: 5%;">
+                    <button disabled style="width: 10%; font-size: larger; background-color: black; color: gray; border: none;">+</button>
+                    <input disabled ="text" placeholder="1" style="text-align: center; width: 80%; font-size: larger; border: 1px solid black;"></input>
+                    <button disabled style="width: 10%; font-size: larger; background-color: black; color: gray; border: none;">-</button>
+                </div>
+            </div>
+            <div class="info-container grid">
+                <div></div>
+                <h1 id="name" class="bold" style="font-size: 3rem; margin-bottom: 3rem;font-family: Blackpast;"></h1>
+                <p id="description" style="width: 60%; margin: 0 auto; text-align: justify;"></p>
+                <div style="width: 60%; margin: auto;">
+                    <hr>
+                    <div class="flex" style="flex-direction: row; margin-top: 0.25rem; align-items: center; justify-content: center;">
+                        <p style="width: 70%; text-align: left;" id="price"></p>
+                        <p style="width: 30%; text-align: right;">Qty: 1</p>
+                    </div>
+                </div>
+                <button disabled style="width: 50%; height: 30%; margin: auto; border-radius: 5rem; background-color: white;">BUY NOW</button>
+            </div>
+        </div>
+        <script>
+            const param = new URLSearchParams(window.location.search);
+            const merch = param.get("merch")
+            const image = document.querySelector("#merch-image");
+            const nameHeading = document.querySelector("#name");
+            const priceTag = document.querySelector("#price");
+            const descriptionTag = document.querySelector("#description");
+            let src = "";
+            let merchName = '';
+            let price = 'Price: \u20B9';
+            let description = '';
+            switch (merch) {
+                case "mousePad":
+                    src = "./Merch/WhatsApp Image 2024-07-28 at 09.23.18 (1).jpeg";
+                    merchName = "desk mat"
+                    price += "800"
+                    description += "Transform your workspace with the Akira Chitra desk mat, combining functionality and style to enhance your desk setup. This large, anti-slip mat provides ample space for your keyboard and mouse, offering a smooth surface that improves precision and control. The mat features a sleek, minimalist design with the Akira Chitra logo, adding a touch of sophistication to your work environment. Made from durable materials, it protects your desk from scratches and spills, making it a practical and stylish addition to any home or office. Whether you're working, gaming, or studying, the Akira Chitra desk mat is a must-have accessory for any setup."
+                    break;
+                case "keyChain":
+                    src = "./Merch/WhatsApp Image 2024-07-28 at 09.23.18 (2).jpeg";
+                    merchName = "key chain"
+                    price += "800"
+                    description += "Carry a piece of the Akira Chitra team with you wherever you go with this stylish keychain. Crafted from high-quality materials, this keychain is designed for durability and everyday use. The sleek black leather strap is adorned with the Akira Chitra logo, adding a touch of elegance and team pride to your keys. It's a perfect accessory for fans and team members alike, serving as a reminder of your support and connection to the Akira Chitra community. Compact and easy to attach to your keys or bag, this keychain is a practical and stylish way to show off your team spirit."
+                    break;
+                case "mug":
+                    src = "./Merch/WhatsApp Image 2024-07-28 at 09.23.18.jpeg";
+                    merchName = "coffee mug"
+                    price += "800"
+                    description += "Elevate your morning routine with the Akira Chitra coffee mug, perfect for enjoying your favorite hot beverages. This high-quality ceramic mug features a comfortable handle and a generous capacity, making it ideal for sipping coffee, tea, or hot chocolate. The design is a tribute to elegance and simplicity, with a glossy white finish and a subtle, yet striking, Akira Chitra logo in gradient colors. It's a stylish addition to any kitchen or office and makes a great gift for fans of the Akira Chitra team. Start your day with a dose of motivation and a touch of elegance."
+                    break;
+                case "bottle":
+                    src = "./Merch/Screenshot 2024-07-30 at 2.36.57 AM.png";
+                    merchName = "water bottle"
+                    price += "800"
+                    description += "Stay hydrated in style with the Akira Chitra water bottle, a sleek and practical accessory for everyday use. Made from high-quality, BPA-free materials, this durable bottle is designed to keep your beverages at the perfect temperature, whether hot or cold. Its matte black finish, complemented by the vibrant and elegant Akira Chitra logo, gives it a modern and sophisticated look. The secure, leak-proof lid and convenient carrying handle make it ideal for on-the-go use, whether you're hitting the gym, commuting, or exploring the outdoors. Stay refreshed and show off your team spirit with this functional and fashionable water bottle."
+                    break;
+            }
+            image.setAttribute("src", src)
+            nameHeading.textContent = merchName
+            priceTag.textContent = price;
+            descriptionTag.textContent = description;
+        </script>
+    </body>
+</html>
