@@ -8,33 +8,34 @@
         <meta name="description" content="Akira Chitra F1 team page"/>
         <meta name="Keywords" content="Akira, Chitra, Akira Chitra, F1, F1 in schools"/>
 
-        <link rel="stylesheet" href="./stylesheet.css" />
+        <link rel="stylesheet" media="screen and (min-width: 900px)" href="./stylesheet.css" />
+        <link rel="stylesheet" media="screen and (max-width: 900px)" href="./small.css" />
     </head>
-    <body style="overflow: hidden;">
+    <body class="overflow">
         <nav class="grid nav-bar">
             <ul class="leftLinks">
                 <li>
-                    <a class="flex" href="./index.html#video">
-                        <img src="./773768_317a629c4a574142ab1f2bec72f8f2ce~mv2.png" height="60%">
-                        <h1 style="font-weight: normal; font-size: 3rem;font-family: Samarkan;">AKIRA CHITRA</h1>
+                    <a class="flex" href="#video">
+                        <img src="./773768_317a629c4a574142ab1f2bec72f8f2ce~mv2.png">
+                        <h1 style="font-weight: normal; font-family: Samarkan;" class="large-font">AKIRA CHITRA</h1>
                     </a>
                 </li>
             </ul>
             <ul class="rightLinks flex">
                 <li>
-                    <a href="./index.html#team-container" class="flex">OUR TEAM</a>
+                    <a href="#team-container" class="flex smaller-font" >OUR TEAM</a>
                 </li>
                 <li>
-                    <a href="./index.html#car-container" class="flex">THE CAR</a>
+                    <a href="#car-container" class="flex smaller-font">THE CAR</a>
                 </li>
                 <li>
-                    <a href="./index.html#game-container" class="flex">F1 GAME</a>
+                    <a href="#game-container" class="flex smaller-font">F1 GAME</a>
                 </li>
                 <li>
-                    <a href="./index.html#sponsor-container" class="flex">OUR SPONSORS</a>
+                    <a href="#sponsor-container" class="flex smaller-font">OUR SPONSORS</a>
                 </li>
                 <li>
-                    <a href="./index.html#merch-container" class="flex">OUR MERCH</a>
+                    <a href="#merch-container" class="flex smaller-font">OUR MERCH</a>
                 </li>
             </ul>
         </nav>
@@ -42,7 +43,7 @@
             <div class="image-container flex">
                 <img id="merch-image" />
                 <img src="./10-2-sold-out-png-file.png" class="soldOut"/>
-                <div class="flex" style="flex-direction: row; width: 69.5%;margin: 1rem auto; height: 5%;">
+                <div class="flex" style="flex-direction: row; width: 69.5%;margin: 1rem auto;">
                     <button disabled style="width: 10%; font-size: larger; background-color: black; color: gray; border: none;">+</button>
                     <input disabled ="text" placeholder="1" style="text-align: center; width: 80%; font-size: larger; border: 1px solid black;"></input>
                     <button disabled style="width: 10%; font-size: larger; background-color: black; color: gray; border: none;">-</button>

@@ -1,7 +1,8 @@
+console.log(window.innerWidth);
 document.addEventListener("DOMContentLoaded", function() {
     const rightToLeft = document.querySelectorAll('.rtl');
     const leftToRight = document.querySelectorAll('.ltr');
-    const merchDiv = document.querySelector('#merch-container');
+    const sponsorDiv = document.querySelector('#sponsor-container');
     
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
@@ -9,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 if (entry.target.classList.contains('ltr')) {
                     entry.target.classList.add('ltrAnimation');
                 } else if (entry.target.tagName === 'DIV') {
-                    entry.target.classList.add('merchAnimation')
+                    entry.target.classList.add('sponsorAnimation')
                 } else {
                     entry.target.classList.add('rtlAnimation');
                 }
@@ -20,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     rightToLeft.forEach((item) => observer.observe(item))
     leftToRight.forEach((item) => observer.observe(item))
-    observer.observe(merchDiv)
+    observer.observe(sponsorDiv)
 });
 
 
