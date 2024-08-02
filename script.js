@@ -1,4 +1,3 @@
-console.log(window.innerWidth);
 document.addEventListener("DOMContentLoaded", function() {
     const rightToLeft = document.querySelectorAll('.rtl');
     const leftToRight = document.querySelectorAll('.ltr');

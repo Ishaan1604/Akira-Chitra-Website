@@ -128,6 +128,17 @@ body {
 #game-container, #car-container, #merch-container {
     background-color: black;
     text-align: center;
+    padding-top: 1.5rem;
+}
+
+#car-container > iframe {
+    width: 80%;
+    height: 80%;
+}
+
+#car-container > p {
+    width: 80%;
+    margin: 0 auto;
 }
 
 #team-info-container {
@@ -205,6 +216,7 @@ body {
     background-color: white;
     text-align: center;
     color: black;
+    padding-top: 0.5rem;
 }
 
 .memberContainer {
@@ -316,4 +328,8 @@ body {
     max-height: 400px;
     width: 50vw;
     height: 30vh;
+}
+
+#description, .info-container > div:last-of-type  {
+    width: 85%;
 }
