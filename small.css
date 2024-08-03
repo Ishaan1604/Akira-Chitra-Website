@@ -19,6 +19,13 @@
     font-style: normal;
 }
 
+@media only screen and (min-width: 400px) {
+    #car-container > iframe, #game-container > iframe{
+        width: 80vw;
+        height: 90vh;
+    }
+}
+
 .large-font {
     font-size: 1em;
 }
@@ -111,7 +118,7 @@ body {
 
 .full-screen {
     width: 100vw;
-    height: 100vh;
+    height: auto;
 }
 
 .team-info {
@@ -129,11 +136,6 @@ body {
     background-color: black;
     text-align: center;
     padding-top: 1.5rem;
-}
-
-#car-container > iframe, #game-container > iframe {
-    width: 80%;
-    height: 80%;
 }
 
 #car-container > p, #game-container > p {
