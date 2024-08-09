@@ -1,3 +1,9 @@
+const video  = document.getElementById("video");
+
+async function playVideo() {
+    await video.play();
+}
+
 document.addEventListener("DOMContentLoaded", function() {
     const rightToLeft = document.querySelectorAll('.rtl');
     const leftToRight = document.querySelectorAll('.ltr');
@@ -23,23 +29,3 @@ document.addEventListener("DOMContentLoaded", function() {
     observer.observe(sponsorDiv)
 });
 
-
-function merchPopUp(merch) {
-
-    const modalBackground = document.createElement("div");
-    modalBackground.classList.add("full-screen");
-    modalBackground.style.position = "absolute";
-    modalBackground.style.top = 0;
-    modalBackground.style.left = 0;
-    modalBackground.style.backgroundColor = "gray";
-    modalBackground.style.opacity = "50%";
-    modalBackground.innerHTML = "<h1>Hello world</h1>"
-
-    const modal = document.createElement("div");
-    modalBackground.appendChild(modal)
-
-    const merchDiv = document.querySelector('#merch-container');
-    merchDiv.appendChild(modalBackground)
-
-    console.log('test');
-}
