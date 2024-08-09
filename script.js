@@ -4,6 +4,10 @@ async function playVideo() {
     await video.play();
 }
 
+if (window.innerWidth < 400) {
+    video.controls = true;
+}
+
 document.addEventListener("DOMContentLoaded", function() {
     const rightToLeft = document.querySelectorAll('.rtl');
     const leftToRight = document.querySelectorAll('.ltr');
